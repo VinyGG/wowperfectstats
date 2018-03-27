@@ -362,7 +362,7 @@ gear_versatility_rating=$v
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-	<title>SimC Stats</title>
+	<title>WoW Perceft Stats</title>
 
 	<style type="text/css">
 	<!--
@@ -381,7 +381,7 @@ gear_versatility_rating=$v
 	<div align="center">
 		<table width="800" border="0">
 			<tr>
-				<td colspan="5"><div align="center" class="style4">SimC Stats</div></td>
+				<td colspan="5"><div align="center" class="style4">WoW Perfect Stats</div></td>
 			</tr>
 			<tr>
 				<td colspan="5">&nbsp;</td>
@@ -403,9 +403,9 @@ gear_versatility_rating=$v
 								<textarea name="charstring4" id="charstring4" disabled="disabled" cols="20" rows="30"><?php echo $charstring; sRB4p(); ?></textarea>
 							</span></div></td>
 							<td width="155"><div align="center"><span class="style3">RaidBots String #5<br />
-								<textarea name="charstring5" id="charstring5" disabled="disabled" cols="20" rows="30"><?php echo $charstring; sRB5p(); ?></textarea>
-								<br />
-							</p></td>
+								<textarea name="charstring4" id="charstring4" disabled="disabled" cols="20" rows="30"><?php echo $charstring; sRB5p(); ?></textarea>
+							</span></div></td>
+							<br />
 						</tr>
 						<tr>
 						</tr>
