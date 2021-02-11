@@ -28,54 +28,68 @@ function sRB1p() {
 	$GLOBALS['i'] = $GLOBALS['i'] + $GLOBALS['cont'];
 	echo swapPos($GLOBALS['i'] ,$GLOBALS['stats'], 75, 15, 05, 05);
 	$GLOBALS['i'] = $GLOBALS['i'] + $GLOBALS['cont'];
+}
+
+function sRB2p() {
 	echo swapPos($GLOBALS['i'] ,$GLOBALS['stats'], 70, 25, 05, 00);
 	$GLOBALS['i'] = $GLOBALS['i'] + $GLOBALS['cont'];
 	echo swapPos($GLOBALS['i'] ,$GLOBALS['stats'], 70, 15, 15, 00);
 	$GLOBALS['i'] = $GLOBALS['i'] + $GLOBALS['cont']; 
 }
 
-function sRB2p() {
+function sRB3p() {
 	echo swapPos($GLOBALS['i'] ,$GLOBALS['stats'], 65, 35, 00, 00);
 	$GLOBALS['i'] = $GLOBALS['i'] + $GLOBALS['cont'];
 	echo swapPos($GLOBALS['i'] ,$GLOBALS['stats'], 65, 25, 10, 00);
 	$GLOBALS['i'] = $GLOBALS['i'] + $GLOBALS['cont'];
+}
+
+function sRB4p() {
 	echo swapPos($GLOBALS['i'] ,$GLOBALS['stats'], 65, 20, 15, 00);
 	$GLOBALS['i'] = $GLOBALS['i'] + $GLOBALS['cont'];
 	echo swapPos($GLOBALS['i'] ,$GLOBALS['stats'], 60, 20, 20, 00);
 	$GLOBALS['i'] = $GLOBALS['i'] + $GLOBALS['cont'];
 }
 
-function sRB3p() {
+function sRB5p() {
 	echo swapPos($GLOBALS['i'] ,$GLOBALS['stats'], 60, 18, 17, 05);
 	$GLOBALS['i'] = $GLOBALS['i'] + $GLOBALS['cont'];
 	echo swapPos($GLOBALS['i'] ,$GLOBALS['stats'], 60, 35, 05, 00);
 	$GLOBALS['i'] = $GLOBALS['i'] + $GLOBALS['cont'];
+}
+
+function sRB6p() {
 	echo swapPos($GLOBALS['i'] ,$GLOBALS['stats'], 55, 45, 00, 00);
 	$GLOBALS['i'] = $GLOBALS['i'] + $GLOBALS['cont'];
 	echo swapPos($GLOBALS['i'] ,$GLOBALS['stats'], 55, 30, 15, 00);
 	$GLOBALS['i'] = $GLOBALS['i'] + $GLOBALS['cont'];
-	
 }
 
-function sRB4p() {
+function sRB7p() {
 	echo swapPos($GLOBALS['i'] ,$GLOBALS['stats'], 55, 20, 20, 05);
 	$GLOBALS['i'] = $GLOBALS['i'] + $GLOBALS['cont'];
 	echo swapPos($GLOBALS['i'] ,$GLOBALS['stats'], 50, 45, 05, 00);
 	$GLOBALS['i'] = $GLOBALS['i'] + $GLOBALS['cont'];
+}
+function sRB8p() {
 	echo swapPos($GLOBALS['i'] ,$GLOBALS['stats'], 40, 25, 25, 10);
 	$GLOBALS['i'] = $GLOBALS['i'] + $GLOBALS['cont'];
 	echo swapPos($GLOBALS['i'] ,$GLOBALS['stats'], 35, 35, 30, 00);
 	$GLOBALS['i'] = $GLOBALS['i'] + $GLOBALS['cont'];
 }
 
-function sRB5p() {
+function sRB9p() {
 	echo swapPos($GLOBALS['i'] ,$GLOBALS['stats'], 35, 35, 20, 10);
 	$GLOBALS['i'] = $GLOBALS['i'] + $GLOBALS['cont'];
 	echo swapPos($GLOBALS['i'] ,$GLOBALS['stats'], 35, 30, 20, 15);
 	$GLOBALS['i'] = $GLOBALS['i'] + $GLOBALS['cont'];
+}
+
+function sRB10p() {
 	echo swapPos($GLOBALS['i'] ,$GLOBALS['stats'], 30, 30, 30, 10);
 	$GLOBALS['i'] = $GLOBALS['i'] + $GLOBALS['cont'];
 	echo swapPos($GLOBALS['i'] ,$GLOBALS['stats'], 30, 25, 25, 20);
+	$GLOBALS['i'] = $GLOBALS['i'] + $GLOBALS['cont'];
 }
 
 // 75%
@@ -349,12 +363,12 @@ function printString($i, $stats, $p1, $p2, $p3, $p4) {
 	$m = (integer)$m;
 	$v = (integer)$v;
 	echo "
-copy=#$i.c$p1.h$p2.m$p3.v$p4
-gear_crit_rating=$c
-gear_haste_rating=$h
-gear_mastery_rating=$m
-gear_versatility_rating=$v
-";
+	copy=#$i.c$p1.h$p2.m$p3.v$p4
+	gear_crit_rating=$c
+	gear_haste_rating=$h
+	gear_mastery_rating=$m
+	gear_versatility_rating=$v
+	";
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -362,18 +376,23 @@ gear_versatility_rating=$v
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-	<title>WoW Perceft Stats</title>
+	<title>WoW Perfect Stats</title>
 
 	<style type="text/css">
-	<!--
+	body{
+		font-family: Verdana;
+	}
 	.style3 {
 		font-family: Georgia, "Times New Roman", Times, serif;
 	}
 	.style4 {
-		font-size: 24px;
+		font-size: 28px;
 		font-weight: bold;
+		body{
+			font-size: 10pt;
+			font-family: Verdana;
+		}
 	}
-	-->
 </style>
 </head>
 
@@ -381,35 +400,75 @@ gear_versatility_rating=$v
 	<div align="center">
 		<table width="800" border="0">
 			<tr>
-				<td colspan="5"><div align="center" class="style4">WoW Perfect Stats</div></td>
+				<div align="center"><span class="style4">RaidBots Strings 10x<br />
+				</span></div>
 			</tr>
 			<tr>
-				<td colspan="5">&nbsp;</td>
+				<label>
+					<div align="center"><br />
+						<td width="75"><div align="center"><span class="style3">String #1<br />
+							<textarea name="charstring1" id="charstring1" disabled="disabled" cols="10" rows="30"><?php echo $charstring; sRB1p(); ?></textarea>
+						</span></div></td>
+						<td width="75"><div align="center"><span class="style3">String #2<br />
+							<textarea name="charstring2" id="charstring2" disabled="disabled" cols="10" rows="30"><?php echo $charstring; sRB2p(); ?></textarea>
+						</span></div></td>
+						<td width="75"><div align="center"><span class="style3">String #3<br />
+							<textarea name="charstring3" id="charstring3" disabled="disabled" cols="10" rows="30"><?php echo $charstring; sRB3p(); ?></textarea>
+						</span></div></td>
+						<td width="75"><div align="center"><span class="style3">String #4<br />
+							<textarea name="charstring4" id="charstring4" disabled="disabled" cols="10" rows="30"><?php echo $charstring; sRB4p(); ?></textarea>
+						</span></div></td>
+						<td width="75"><div align="center"><span class="style3">String #5<br />
+							<textarea name="charstring5" id="charstring5" disabled="disabled" cols="10" rows="30"><?php echo $charstring; sRB5p(); ?></textarea>
+						</span></div></td>
+						<td width="75"><div align="center"><span class="style3">String #6<br />
+							<textarea name="charstring6" id="charstring6" disabled="disabled" cols="10" rows="30"><?php echo $charstring; sRB6p(); ?></textarea>
+						</span></div></td>
+						<td width="75"><div align="center"><span class="style3">String #7<br />
+							<textarea name="charstring7" id="charstring7" disabled="disabled" cols="10" rows="30"><?php echo $charstring; sRB7p(); ?></textarea>
+						</span></div></td>
+						<td width="75"><div align="center"><span class="style3">String #8<br />
+							<textarea name="charstring8" id="charstring8" disabled="disabled" cols="10" rows="30"><?php echo $charstring; sRB8p(); ?></textarea>
+						</span></div></td>
+						<td width="75"><div align="center"><span class="style3">String #9<br />
+							<textarea name="charstring9" id="charstring9" disabled="disabled" cols="10" rows="30"><?php echo $charstring; sRB9p(); ?></textarea>
+						</span></div></td>
+						<td width="75"><div align="center"><span class="style3">String #10<br />
+							<textarea name="charstring10" id="charstring10" disabled="disabled" cols="10" rows="30"><?php echo $charstring; sRB10p(); ?></textarea>
+						</span></div></td>
+
+						<br />
+					</tr>
+				</table>
+                                <table width="800" border="0">
+			<tr>
+                        <br />
+                        <br />
+				<div align="center"><span class="style4">RaidBots Strings 5x<br />
+				</span></div>
 			</tr>
 			<tr>
-				<td width="159"><div align="center"></div>
-					<label>
-						<div align="center"><br />
-							<td width="155"><div align="center"><span class="style3">RaidBots String #1<br />
-								<textarea name="charstring1" id="charstring2" disabled="disabled" cols="20" rows="30"><?php echo $charstring; sRB1p(); ?></textarea>
-							</span></div></td>
-							<td width="155"><div align="center"><span class="style3">RaidBots String #2<br />
-								<textarea name="charstring2" id="charstring2" disabled="disabled" cols="20" rows="30"><?php echo $charstring; sRB2p(); ?></textarea>
-							</span></div></td>
-							<td width="155"><div align="center"><span class="style3">RaidBots String #3<br />
-								<textarea name="charstring3" id="charstring3" disabled="disabled" cols="20" rows="30"><?php echo $charstring; sRB3p(); ?></textarea>
-							</span></div></td>
-							<td width="155"><div align="center"><span class="style3">RaidBots String #4<br />
-								<textarea name="charstring4" id="charstring4" disabled="disabled" cols="20" rows="30"><?php echo $charstring; sRB4p(); ?></textarea>
-							</span></div></td>
-							<td width="155"><div align="center"><span class="style3">RaidBots String #5<br />
-								<textarea name="charstring4" id="charstring4" disabled="disabled" cols="20" rows="30"><?php echo $charstring; sRB5p(); ?></textarea>
-							</span></div></td>
-							<br />
-						</tr>
-						<tr>
-						</tr>
-					</table>
-				</div>
-			</body>
-			</html>
+				<label>
+					<div align="center"><br />
+						<td width="75"><div align="center"><span class="style3">String #1<br />
+							<textarea name="charstring1" id="charstring1" disabled="disabled" cols="10" rows="30"><?php echo $charstring; sRB1p(); sRB2p(); ?></textarea>
+						</span></div></td>
+						<td width="75"><div align="center"><span class="style3">String #2<br />
+							<textarea name="charstring2" id="charstring2" disabled="disabled" cols="10" rows="30"><?php echo $charstring; sRB3p(); sRB4p(); ?></textarea>
+						</span></div></td>
+						<td width="75"><div align="center"><span class="style3">String #3<br />
+							<textarea name="charstring3" id="charstring3" disabled="disabled" cols="10" rows="30"><?php echo $charstring; sRB5p(); sRB6p(); ?></textarea>
+						</span></div></td>
+						<td width="75"><div align="center"><span class="style3">String #4<br />
+							<textarea name="charstring4" id="charstring4" disabled="disabled" cols="10" rows="30"><?php echo $charstring; sRB7p(); sRB8p(); ?></textarea>
+						</span></div></td>
+						<td width="75"><div align="center"><span class="style3">String #5<br />
+							<textarea name="charstring5" id="charstring5" disabled="disabled" cols="10" rows="30"><?php echo $charstring; sRB9p(); sRB10p(); ?></textarea>
+						</span></div></td>
+						<br />
+					</tr>
+				</table>
+			</div>
+                        
+		</body>
+		</html>
